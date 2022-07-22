@@ -505,11 +505,15 @@ int main(int argc, char **argv)
   if(!udev_failed
      && ((udev_devices = udev_enumerate_get_list_entry(udev_enum)) < 0))
     udev_failed = 1;
-
+  printf("print...%i\n", udev_failed);
   if(!udev_failed)
     {
+      printf("yy\n");
       udev_list_entry_foreach(udev_entry, udev_devices)
 	{
+          printf("xx\n");
+          printf("S: %s\n",
+                       udev_list_entry_get_name(udev_entry));
 	  if(devpath == NULL)
 	    {
 	      syspath = udev_list_entry_get_name(udev_entry);
