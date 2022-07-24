@@ -6,7 +6,7 @@ On Debian/Ubuntu-like systems, compile and install with
 
 ```
 sudo apt install git make gcc libudev-dev python3-pil python-usb libusb-1.0-0 python3-gi gir1.2-gtk-3.0
-git clone https://github.com/abelits/ptouch-770
+git clone https://github.com/probonopd/ptouch-770
 cd ptouch-770/
 make
 strip ptouch-770-write
@@ -15,6 +15,10 @@ sudo cp ptouch-770-write ptouch-770-gui /usr/local/bin/
 ## Usage (Python GTK3 GUI)
 
 ![screenshot](https://user-images.githubusercontent.com/2480569/47957306-38ca8c00-dfab-11e8-8d83-3d81aa30278f.png)
+
+```
+python3 ptouch-770-gui
+```
 
 ## Usage (Python script)
 
